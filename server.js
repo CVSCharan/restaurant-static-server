@@ -109,6 +109,7 @@ db.all(`SELECT name FROM sqlite_master WHERE type='table'`, [], (err, rows) => {
 
 // Poling the server for activeness
 app.get("/api/ping", (req, res) => {
+  console.info("Server is alive!");
   res.status(200).send("Server is alive!");
 });
 
